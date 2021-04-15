@@ -2,3 +2,10 @@
 /idea
 ./idea
 idea
+pycache
+_pycache_
+.pycache
+./pycache
+._pycache_
+./_pycache_
+/_pycache_
