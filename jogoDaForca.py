@@ -1,5 +1,4 @@
 def jogo():
-    palavras = ['Banana', 'Abacate']
     palavra_digitada = ""
     espaco = []
     corpo = 0
@@ -16,7 +15,7 @@ def jogo():
 
     while palavra_digitada != palavras[0] or corpo < 8:
         letra = input('Digite uma letra: ')
-        if letra in palavras[0]:
+        if letra.upper() in palavras[0]:
             print('acertou')
             palavra_digitada = letra
         else:
@@ -25,11 +24,10 @@ def jogo():
     
 def desenho_forca():
     print('-----')
+    i =1
+    print('|    |')
     for i in range(4):
-        if i == 0:
-            print('|    |')
-        else:
-            print('|')
+        print('|')
 
 if __name__ == '__main__':
     print('Vamos jogar')
