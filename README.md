@@ -4,6 +4,8 @@
 
 Implementação do Jogo da Velha em Python
 
+![inicio jogo](https://github.com/joao-lucasilva/Jogo-Da-Forca/blob/master/assets/img/screenshot1.JPG)
+
 Tabela de conteúdos
 =================
    * [Sobre](#sobre)
@@ -19,6 +21,9 @@ O jogo da forca é um jogo em que o jogador tem que acertar qual é a palavra  "
 ## Como Funciona
 Ao executar o arquivo, o jogo abrirá no terminal python.
 Ao iniciar uma palavra secreta será gerada e o jogo pedirá que digite uma letra até se completar a palavra secreta ou até suas tentativas acabarem e o personagem ir para a "forca".
+
+![demo-jogo](https://github.com/joao-lucasilva/Jogo-Da-Forca/blob/master/assets/img/screenshot2.JPG)
+
 ## Features
 - [X] Desenhar a forca;
 - [X] Gerar uma palavra secreta;
