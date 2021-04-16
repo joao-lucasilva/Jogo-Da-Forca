@@ -22,6 +22,8 @@ def jogo():
     acertou = errou = False
     corpo = 0
 
+    letras_digitadas = []
+    
     for i in range(tamanho_palavra):
         palavra_digitada.append("_")
     print('A palavra tem ', tamanho_palavra, 'letras')
@@ -29,9 +31,14 @@ def jogo():
 
 
     while not acertou and not errou:
+        print()
         chute = input('Digite uma letra: ')
+        letras_digitadas.append(chute.upper())
+        if chute.upper()in letras_digitadas:
+            print(chute.upper(),'já foi digitado')
+                            
         if chute.upper() in palavra_secreta:
-            print('acertou')
+            print('Acertou')
             posicao = 0
             for letra in palavra_secreta:
                 if chute.upper() == letra:
@@ -39,9 +46,12 @@ def jogo():
                 posicao += 1
             
         else:
-            print('Essa letra não está na palavra')
+            print(chute.upper(),'não está na palavra')
             corpo+= 1
         imprime_espaco(palavra_digitada)
+        print('Letras já digitadas:', end=' ')
+        for letra in letras_digitadas:
+            print(letra, end=' ')
 
         errou = corpo == 7
         acertou = '_' not in palavra_digitada
@@ -52,9 +62,12 @@ def jogo():
         print('Você não descobriu a palavra, mais sorte na próxima!')
         
     
-
+def inicio():
+    print('*'*50)
+    print('*'*18, 'JOGO DA FORCA','*'*17)
+    print('*'*50)
 
 if __name__ == '__main__':
-    print('Vamos jogar')
+    inicio()
     desenho_forca()
     jogo()
